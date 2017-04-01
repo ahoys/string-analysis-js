@@ -1,7 +1,7 @@
 const isValidType = require('../util');
 
 /**
- *
+ * Returns the percentage of repetitive structure in a string or an array of strings.
  * @param payload
  * @param splitter
  * @returns {number}
@@ -16,11 +16,11 @@ const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
     ) {
       // Invalid payload or splitter.
       console.error(
-        '[getPercentageOfRepetitiveStructure]: Invalid parameters'
+        'Error [getPercentageOfRepetitiveStructure]: Invalid parameters'
       );
       return 0;
     }
-
+    // Distinct words.
     const parts = typeof payload === 'string'
       ? payload.split(splitter)
       : payload;
@@ -72,7 +72,7 @@ const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
     });
     return Math.round(sum / (count || 1) * 100);
   } catch (e) {
-    console.log(`Error [Event][getPercentageOfRepetitiveStructure]: ${e.message}`);
+    console.error(`Error [getPercentageOfRepetitiveStructure]: ${e.message}`);
     return 0;
   }
 };

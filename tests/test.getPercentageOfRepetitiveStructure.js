@@ -4,18 +4,10 @@ const strings = require('./strings.json')['getPercentageOfRepetitiveStructure'];
 
 // Tests --------------------------------------
 
-exports.valid_strings = function (test) {
-  strings['valid'].forEach((testItem) => {
-    const result = getPercentageOfRepetitiveStructure(testItem[0]);
-    test.equal(result, testItem[1]);
-  });
-  test.done();
-};
-
-exports.invalid_strings = function (test) {
-  strings['invalid'].forEach((testItem) => {
-    const result = getPercentageOfRepetitiveStructure(testItem[0]);
-    test.equal(result, testItem[1], testItem);
+exports.all_strings = function (test) {
+  strings.forEach((strArr) => {
+    const result = getPercentageOfRepetitiveStructure(strArr[0]);
+    test.equal(result, strArr[1], strArr);
   });
   test.done();
 };
