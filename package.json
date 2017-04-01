@@ -1,0 +1,19 @@
+{
+  "name": "string-analysis-js",
+  "main": "index.js",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Simple tools for analysing strings.",
+  "author": {
+    "name": "Ari Höysniemi",
+    "url": "https://github.com/ahoys"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahoys/string-analysis-js.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "getPercentageOfRepetitiveStructure": {
+    "valid": [
+      ["", 0],
+      [" ", 0],
+      ["a", 0],
+      ["a b c d e f g h i j k l m n", 0],
+      ["!\"#¤%&/()=?", 0],
+      ["0123456789", 0],
+      ["This is an example.", 0]
+    ],
+    "invalid": [
+      ["a a a", 100],
+      ["a a a a", 100],
+      ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 100],
+      ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. BREAK. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 44]
+    ]
+  }
+}
