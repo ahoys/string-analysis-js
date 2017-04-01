@@ -1,4 +1,4 @@
-// nodeunit tests/test.getPercentageOfShortWords.js
+// nodeunit tests/test.getPercentageOfLongStrings.js
 const getPercentageOfLongStrings = require('../functions/inc.func.getPercentageOfLongStrings');
 const strings = require('./strings.json')['getPercentageOfLongStrings'];
 
