@@ -28,5 +28,13 @@
     [" ", 0],
     ["", 0],
     ["1 1 2 3", 0]
+  ],
+  "getPercentageOfRepetitiveChars": [
+    ["aaa", 100],
+    ["aaa aaa", 86],
+    ["a b c d", 0],
+    ["aa", 0],
+    ["a", 0],
+    ["", 0]
   ]
 }
