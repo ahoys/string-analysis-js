@@ -1,5 +1,5 @@
 // nodeunit tests/test.getPercentageOfRepetitiveStructure.js
-const getPercentageOfRepetitiveStructure = require('../tools/inc.func.getPercentageOfRepetitiveStructure');
+const getPercentageOfRepetitiveStructure = require('../functions/inc.func.getPercentageOfRepetitiveStructure');
 const strings = require('./strings.json')['getPercentageOfRepetitiveStructure'];
 
 // Tests --------------------------------------

@@ -1,5 +1,5 @@
 // nodeunit tests/test.getPercentageOfShortWords.js
-const getPercentageOfShortStrings = require('../tools/inc.func.getPercentageOfShortStrings');
+const getPercentageOfShortStrings = require('../functions/inc.func.getPercentageOfShortStrings');
 const strings = require('./strings.json')['getPercentageOfShortStrings'];
 
 // Tests --------------------------------------

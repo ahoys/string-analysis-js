@@ -1,2 +1,2 @@
-module.exports = require('./tools/inc.func.getPercentageOfRepetitiveStructure');
-module.exports = require('./tools/inc.func.getPercentageOfShortStrings');
+module.exports = require('./functions/inc.func.getPercentageOfRepetitiveStructure');
+module.exports = require('./functions/inc.func.getPercentageOfShortStrings');
