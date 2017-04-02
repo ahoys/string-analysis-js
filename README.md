@@ -2,9 +2,15 @@
 Simple tools for analysing strings.
 Useful for purposes like detecting spam from messages.
 
+## About results
+
+All percentages are returned in a range of 0 to 1, where 1 translates to 100%.
+The results are not rounded.
+
 ## Functions
 
 These are the functions you can use to analyse your string.
+Note that you do not need to input values to @params that have a default value.
 
 **getPercentageOfRepetitiveStructure(payload, splitter)**
 
