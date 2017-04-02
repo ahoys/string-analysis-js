@@ -9,7 +9,7 @@ const getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
     let sum = 0;
     let multiplier = 0;
     let prevChar = null;
-    for (let i = 0, len = payload.length; i < len; i++) {
+    for (let i = 0, len = payload.length; i < len; ++i) {
       const char = payload[i];
       if (char === prevChar) {
         // Make sure the first char will be counted too.
