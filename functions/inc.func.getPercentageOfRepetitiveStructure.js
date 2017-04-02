@@ -48,10 +48,9 @@ const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
     let sum = 0;
     let count = 0;
     Object.keys(strTable).forEach((key) => {
-      const thisStr = strTable[key];
-      const distanceCount = thisStr.distanceToPrevious.length - 1;
-      sum += thisStr.sameDistanceAsPreviousCount / (distanceCount || 1);
-      count++;
+      const distanceCount = strTable[key].distanceToPrevious.length - 1;
+      sum += strTable[key].sameDistanceAsPreviousCount / (distanceCount || 1);
+      ++count;
     });
     return sum / (count || 1);
   } catch (e) {
