@@ -13,10 +13,27 @@ exports.isValidType = function (test) {
     [[['test']], ['array']],
     [[4], [4]],
     [[{}, 1, 'test'], [['string', {}], 4, 'string']],
+    [[[0, 1, 2]], ['array']],
   ];
   templates.forEach((params) => {
     const result = isValidType(params[0], params[1]);
     test.equal(result, true, params);
+  });
+  test.done();
+};
+
+exports.isInvalidType = function (test) {
+  const templates = [
+    [[0], ['string']],
+    [[undefined], ['string']],
+    [[['nesting']], ['string']],
+    [[], ['string']],
+    [['test'], []],
+    [[0, 1], [['string', 'array'], 'number']],
+  ];
+  templates.forEach((params) => {
+    const result = isValidType(params[0], params[1]);
+    test.equal(result, false, params);
   });
   test.done();
 };
