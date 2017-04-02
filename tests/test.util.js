@@ -1,5 +1,5 @@
 // nodeunit tests/test.util.js
-const isValidType = require('../util');
+const isValidType = require('../util/inc.func.isValidType');
 
 // Tests --------------------------------------
 

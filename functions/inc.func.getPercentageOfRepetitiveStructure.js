@@ -1,4 +1,4 @@
-const isValidType = require('../util');
+const isValidType = require('../util/inc.func.isValidType');
 
 /**
  * Returns the percentage of repetitive structure in a string or an array of strings.
