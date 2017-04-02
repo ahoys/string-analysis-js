@@ -25,8 +25,7 @@ const getPercentageOfLongStrings = (payload = [], splitter = ' ', minLength = 16
     const parts = typeof payload === 'string'
       ? payload.split(splitter)
       : payload;
-    const longWords = parts.filter(x => x.length >= minLength);
-    return Math.round(longWords.length / (parts.length || 1) * 100);
+    return parts.filter(x => x.length >= minLength).length / (parts.length || 1);
   } catch (e) {
     console.error(`Error [getPercentageOfLongStrings]: ${e.message}`);
     return 0;

@@ -6,7 +6,7 @@ const strings = require('./strings.json')['getPercentageOfShortStrings'];
 
 exports.all_strings_default_params = function (test) {
   strings.forEach((strArr) => {
-    const result = getPercentageOfShortStrings(strArr[0]);
+    const result = getPercentageOfShortStrings(strArr[0]).toFixed(2);
     test.equal(result, strArr[1], strArr);
   });
   test.done();

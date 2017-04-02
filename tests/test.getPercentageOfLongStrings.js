@@ -6,7 +6,7 @@ const strings = require('./strings.json')['getPercentageOfLongStrings'];
 
 exports.all_strings_default_params = function (test) {
   strings.forEach((strArr) => {
-    const result = getPercentageOfLongStrings(strArr[0]);
+    const result = getPercentageOfLongStrings(strArr[0]).toFixed(2);
     test.equal(result, strArr[1], strArr);
   });
   test.done();

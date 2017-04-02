@@ -70,7 +70,7 @@ const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
       sum += thisStr.sameDistanceAsPreviousCount / (distanceCount || 1);
       count++;
     });
-    return Math.round(sum / (count || 1) * 100);
+    return sum / (count || 1);
   } catch (e) {
     console.error(`Error [getPercentageOfRepetitiveStructure]: ${e.message}`);
     return 0;

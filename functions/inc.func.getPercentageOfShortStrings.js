@@ -26,7 +26,7 @@ const getPercentageOfShortStrings = (payload = [], splitter = ' ', maxLength = 3
       ? payload.split(splitter)
       : payload;
     const shortWords = parts.filter(x => x.length <= maxLength);
-    return Math.round(shortWords.length / (parts.length || 1) * 100);
+    return shortWords.length / (parts.length || 1);
   } catch (e) {
     console.error(`Error [getPercentageOfShortStrings]: ${e.message}`);
     return 0;

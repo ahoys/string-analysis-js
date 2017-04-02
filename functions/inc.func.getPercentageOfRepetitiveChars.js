@@ -29,7 +29,7 @@ const getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
       }
       prevChar = char;
     }
-    return Math.round(sum / (payload.length || 1) * 100);
+    return sum / (payload.length || 1);
   } catch (e) {
     console.error(`Error [getPercentageOfRepetitiveChars]: ${e.message}`);
     return 0;
