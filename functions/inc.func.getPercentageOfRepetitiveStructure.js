@@ -6,12 +6,9 @@
  */
 const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
   try {
-    // Distinct words.
     const parts = typeof payload === 'string'
       ? payload.split(splitter)
       : payload;
-
-    if (!parts || parts.constructor !== Array) return 0;
     const totalCount = parts.length;
     if (totalCount < 1) return 0;
     const strTable = {};

@@ -7,7 +7,6 @@
  */
 const getPercentageOfShortStrings = (payload = [], splitter = ' ', maxLength = 3) => {
   try {
-    // Distinct words.
     const parts = typeof payload === 'string'
       ? payload.split(splitter)
       : payload;
