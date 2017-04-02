@@ -11,3 +11,13 @@ exports.all_strings_default_params = function (test) {
   });
   test.done();
 };
+
+exports.invalid_params = function (test) {
+  let result;
+  result = getPercentageOfRepetitiveStructure({});
+  test.equal(result, 0, result);
+  result = getPercentageOfRepetitiveStructure('test test', {});
+  test.equal(result, 0, result);
+  test.expect(2);
+  test.done();
+};
