@@ -4,6 +4,10 @@
   "version": "0.0.5",
   "license": "MIT",
   "description": "Simple tools for analysing strings.",
+  "files": [
+    "index.js",
+    "functions/"
+  ],
   "author": {
     "name": "Ari Höysniemi",
     "url": "https://github.com/ahoys"
