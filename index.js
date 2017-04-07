@@ -8,4 +8,4 @@ module.exports = {
   getPercentageOfLongStrings: require('./functions/inc.func.getPercentageOfLongStrings'),
   getPercentageOfRepetitiveChars: require('./functions/inc.func.getPercentageOfRepetitiveChars'),
   getAll: require('./functions/inc.func.getAll'),
-}
+};
