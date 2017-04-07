@@ -1,13 +1,17 @@
 // nodeunit tests/test.getAll.js
-const params = ['id', 'function', 'preferredStringFormat', 'parameters'];
+const params = ['key', 'function', 'preferredStringFormat', 'parameters'];
 const totalFunctions = Object.keys(require('../index')).length - 1;
 
 // Tests --------------------------------------
 
+const isFunction = (target) => {
+  const getType = {};
+  return target && getType.toString.call(target) === '[object Function]';
+};
+
 exports.all_functions_available = function (test) {
   const Obj = require('../functions/inc.func.getAll')();
-  const result = Object.keys(Obj).length;
-  test.equal(result, totalFunctions);
+  test.equal(Obj.length, totalFunctions);
   test.done();
 };
 
@@ -15,23 +19,25 @@ exports.all_object_keys_available = function (test) {
   const Obj = require('../functions/inc.func.getAll')();
   let result;
   let explanation;
-  Object.keys(Obj).forEach((key) => {
-      result = true;
-      explanation = [];
-      const thisItem = Obj[key];
-      if (Object.keys(thisItem).length !== params.length) {
-          result = false;
-          explanation.push(`${key}: invalid count of parameters.`);
-      } else {
-          params.forEach((param) => {
-              if (!(param in thisItem)) {
-                  result = false;
-                  explanation.push(`${key}: missing param (${param}).`);
-              }
-          });
+  Obj.forEach((item) => {
+    result = true;
+    explanation = [];
+    if (Object.keys(item).length !== params.length) {
+      result = false;
+      explanation.push(`${item.key}: invalid count of parameters.`);
+    }
+    params.forEach((param) => {
+      if (!(param in item)) {
+        result = false;
+        explanation.push(`${item.key}: missing param (${param}).`);
       }
-      test.ok(result, explanation);
+    });
+    if (!isFunction(item.function)) {
+      result = false;
+      explanation.push(`${item.key}: has no valid functions attached.`)
+    }
+    test.ok(result, explanation);
   });
-  test.expect(Object.keys(Obj).length);
+  test.expect(Obj.length);
   test.done();
 };
