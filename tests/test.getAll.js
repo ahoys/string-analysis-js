@@ -13,22 +13,24 @@ exports.all_functions_available = function (test) {
 
 exports.all_object_keys_available = function (test) {
   const obj = getAll();
-  let allFound = true;
-  let missing = [];
+  allFound = true;
+  let explanation = [];
   Object.keys(obj).forEach((key) => {
+      explanation = [];
       const thisItem = obj[key];
       if (Object.keys(thisItem).length !== params.length) {
           allFound = false;
-          missing.push(`${key}: invalid count of parameters.`);
+          explanation.push(`${key}: invalid count of parameters.`);
       } else {
           params.forEach((param) => {
               if (!(param in thisItem)) {
                   allFound = false;
-                  missing.push(`${key}: missing param (${param}).`);
+                  explanation.push(`${key}: missing param (${param}).`);
               }
           });
       }
+      test.ok(allFound, explanation);
   });
-  test.equal(allFound, true, missing);
+  test.expect(Object.keys(obj).length);
   test.done();
 };

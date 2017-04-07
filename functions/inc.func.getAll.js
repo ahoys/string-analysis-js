@@ -1,9 +1,9 @@
 const Index = require('../index');
 
 /**
- * Returns all the available public tools in a
- * one object.
- * The functions are accompanied with additional usage information.
+ * Returns all the available tools.
+ * Also additional infomation about the functions is provided.
+ * @returns {object}
  */
 const getAll = () => {
   try {
