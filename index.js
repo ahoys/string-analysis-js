@@ -7,5 +7,5 @@ module.exports = {
   getPercentageOfShortStrings: require('./functions/inc.func.getPercentageOfShortStrings'),
   getPercentageOfLongStrings: require('./functions/inc.func.getPercentageOfLongStrings'),
   getPercentageOfRepetitiveChars: require('./functions/inc.func.getPercentageOfRepetitiveChars'),
-  getAll: this.getAll,
+  getAll: require('./functions/inc.func.getAll'),
 }
