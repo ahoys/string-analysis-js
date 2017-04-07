@@ -9,20 +9,20 @@ module.exports = () => {
       {
         key: 'getPercentageOfRepetitiveStructure',
         function: require('../index').getPercentageOfRepetitiveStructure,
-        preferredStringFormat: 'array',
-        parameters: [['array', 'string'], 'string'],
+        preferredStringFormat: 'Array',
+        parameters: [['Array', 'string'], 'string'],
       },
       {
         key: 'getPercentageOfShortStrings',
         function: require('../index').getPercentageOfShortStrings,
-        preferredStringFormat: 'array',
-        parameters: [['array', 'string'], 'string', 'number'],
+        preferredStringFormat: 'Array',
+        parameters: [['Array', 'string'], 'string', 'number'],
       },
       {
         key: 'getPercentageOfLongStrings',
         function: require('../index').getPercentageOfLongStrings,
-        preferredStringFormat: 'array',
-        parameters: [['array', 'string'], 'string', 'number'],
+        preferredStringFormat: 'Array',
+        parameters: [['Array', 'string'], 'string', 'number'],
       },
       {
         key: 'getPercentageOfRepetitiveChars',
