@@ -1,24 +1,24 @@
 // nodeunit tests/test.getAll.js
-const getAll = require('../functions/inc.func.getAll');
 const params = ['id', 'function', 'preferredStringFormat', 'parameters'];
+const totalFunctions = Object.keys(require('../index')).length - 1;
 
 // Tests --------------------------------------
 
 exports.all_functions_available = function (test) {
-  const obj = getAll();
-  const result = Object.keys(obj).length;
-  test.equal(result, 4);
+  const Obj = require('../functions/inc.func.getAll')();
+  const result = Object.keys(Obj).length;
+  test.equal(result, totalFunctions);
   test.done();
 };
 
 exports.all_object_keys_available = function (test) {
-  const obj = getAll();
+  const Obj = require('../functions/inc.func.getAll')();
   let result;
   let explanation;
-  Object.keys(obj).forEach((key) => {
+  Object.keys(Obj).forEach((key) => {
       result = true;
       explanation = [];
-      const thisItem = obj[key];
+      const thisItem = Obj[key];
       if (Object.keys(thisItem).length !== params.length) {
           result = false;
           explanation.push(`${key}: invalid count of parameters.`);
@@ -32,6 +32,6 @@ exports.all_object_keys_available = function (test) {
       }
       test.ok(result, explanation);
   });
-  test.expect(Object.keys(obj).length);
+  test.expect(Object.keys(Obj).length);
   test.done();
 };

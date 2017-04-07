@@ -1,5 +1,4 @@
 // nodeunit tests/test.index.js
-const Index = require('../index');
 const totalFunctions = 5;
 
 // Tests --------------------------------------
@@ -10,18 +9,20 @@ const isFunction = (target) => {
 };
 
 exports.all_functions_available = function (test) {
-  const result = Object.keys(Index).length;
+  const Obj = require('../index');
+  const result = Object.keys(Obj).length;
   test.equal(result, totalFunctions, result);
   test.done();
 };
 
 exports.all_keys_have_functions = function (test) {
+  const Obj = require('../index');
   let result;
   let explanation;
-  Object.keys(Index).forEach((key) => {
+  Object.keys(Obj).forEach((key) => {
     result = true;
     explanation = '';
-    if (!isFunction(Index[key])) {
+    if (!isFunction(Obj[key])) {
       result = false;
       explanation = `${key} is not a function.`;
     }

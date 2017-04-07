@@ -1,24 +1,25 @@
 // nodeunit tests/test.getPercentageOfShortStrings.js
-const getPercentageOfShortStrings = require('../functions/inc.func.getPercentageOfShortStrings');
 const strings = require('./strings.json')['getPercentageOfShortStrings'];
 
 // Tests --------------------------------------
 
 exports.all_strings_default_params = function (test) {
+  const Obj = require('../functions/inc.func.getPercentageOfShortStrings');
   strings.forEach((strArr) => {
-    const result = getPercentageOfShortStrings(strArr[0]).toFixed(2);
+    const result = Obj(strArr[0]).toFixed(2);
     test.equal(result, strArr[1], strArr);
   });
   test.done();
 };
 
 exports.invalid_params = function (test) {
+  const Obj = require('../functions/inc.func.getPercentageOfShortStrings');
   let result;
-  result = getPercentageOfShortStrings({});
+  result = Obj({});
   test.equal(result, 0, result);
-  result = getPercentageOfShortStrings('test test', {});
+  result = Obj('test test', {});
   test.equal(result, 0, result);
-  result = getPercentageOfShortStrings('test test', ' ', {});
+  result = Obj('test test', ' ', {});
   test.equal(result, 0, result);
   test.expect(3);
   test.done();

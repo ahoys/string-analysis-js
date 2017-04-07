@@ -1,22 +1,23 @@
 // nodeunit tests/test.getPercentageOfRepetitiveStructure.js
-const getPercentageOfRepetitiveStructure = require('../functions/inc.func.getPercentageOfRepetitiveStructure');
 const strings = require('./strings.json')['getPercentageOfRepetitiveStructure'];
 
 // Tests --------------------------------------
 
 exports.all_strings_default_params = function (test) {
+  const Obj = require('../functions/inc.func.getPercentageOfRepetitiveStructure');
   strings.forEach((strArr) => {
-    const result = getPercentageOfRepetitiveStructure(strArr[0]).toFixed(2);
+    const result = Obj(strArr[0]).toFixed(2);
     test.equal(result, strArr[1], strArr);
   });
   test.done();
 };
 
 exports.invalid_params = function (test) {
+  const Obj = require('../functions/inc.func.getPercentageOfRepetitiveStructure');
   let result;
-  result = getPercentageOfRepetitiveStructure({});
+  result = Obj({});
   test.equal(result, 0, result);
-  result = getPercentageOfRepetitiveStructure('test test', {});
+  result = Obj('test test', {});
   test.equal(result, 0, result);
   test.expect(2);
   test.done();
