@@ -7,17 +7,21 @@
 module.exports = (content = '', minChars = 3) => {
   try {
     let sum = 0;
-    let multiplier = 0;
+    let multiplier = 1;
     let prevChar = null;
+    let pass = false;
     const len = content.length;
     for (let i = 0; i < len; ++i) {
       if (content[i] === prevChar) {
-        // Make sure the first char will be counted too.
-        multiplier += multiplier < 1 ? 2 : 1;
-        if (multiplier >= minChars) {
+        multiplier = multiplier + 1;
+        if (multiplier >= minChars || pass) {
           sum += multiplier;
           multiplier = 0;
+          pass = true;
         }
+      } else {
+        multiplier = 1;
+        pass = false;
       }
       prevChar = content[i];
     }

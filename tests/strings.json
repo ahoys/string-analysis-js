@@ -30,6 +30,7 @@
     ["1 1 2 3", 0]
   ],
   "getPercentageOfRepetitiveChars": [
+    ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 1],
     ["aaa", 1],
     ["aaa aaa", 0.86],
     ["a b c d", 0],
