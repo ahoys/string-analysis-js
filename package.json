@@ -1,9 +1,13 @@
 {
   "name": "string-analysis-js",
   "main": "index.js",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "license": "MIT",
   "description": "Simple tools for analysing strings.",
+  "files": [
+    "index.js",
+    "functions/"
+  ],
   "author": {
     "name": "Ari Höysniemi",
     "url": "https://github.com/ahoys"

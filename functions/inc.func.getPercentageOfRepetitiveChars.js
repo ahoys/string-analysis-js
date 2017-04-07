@@ -1,5 +1,3 @@
-const isValidType = require('../util/inc.func.isValidType');
-
 /**
  * Returns the percentage of repetitive chars in a string.
  * @param payload
@@ -8,18 +6,12 @@ const isValidType = require('../util/inc.func.isValidType');
  */
 const getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
   try {
-    if (!isValidType([payload, minChars], ['string', 'number'])) {
-      console.error(
-        'Error [getPercentageOfRepetitiveChars]: Invalid parameters'
-      );
-      return 0;
-    }
     let sum = 0;
     let multiplier = 0;
     let prevChar = null;
-    for (let i = 0; i < payload.length; i++) {
-      const char = payload[i];
-      if (char === prevChar) {
+    const len = payload.length;
+    for (let i = 0; i < len; ++i) {
+      if (payload[i] === prevChar) {
         // Make sure the first char will be counted too.
         multiplier += multiplier < 1 ? 2 : 1;
         if (multiplier >= minChars) {
@@ -27,9 +19,9 @@ const getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
           multiplier = 0;
         }
       }
-      prevChar = char;
+      prevChar = payload[i];
     }
-    return Math.round(sum / (payload.length || 1) * 100);
+    return sum / (len || 1);
   } catch (e) {
     console.error(`Error [getPercentageOfRepetitiveChars]: ${e.message}`);
     return 0;
