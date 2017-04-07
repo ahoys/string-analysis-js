@@ -8,25 +8,25 @@ module.exports = () => {
     return [
       {
         key: 'getPercentageOfRepetitiveStructure',
-        function: require('../index').getPercentageOfRepetitiveStructure,
+        func: require('../index').getPercentageOfRepetitiveStructure,
         preferredStringFormat: 'Array',
         parameters: [['Array', 'string'], 'string'],
       },
       {
         key: 'getPercentageOfShortStrings',
-        function: require('../index').getPercentageOfShortStrings,
+        func: require('../index').getPercentageOfShortStrings,
         preferredStringFormat: 'Array',
         parameters: [['Array', 'string'], 'string', 'number'],
       },
       {
         key: 'getPercentageOfLongStrings',
-        function: require('../index').getPercentageOfLongStrings,
+        func: require('../index').getPercentageOfLongStrings,
         preferredStringFormat: 'Array',
         parameters: [['Array', 'string'], 'string', 'number'],
       },
       {
         key: 'getPercentageOfRepetitiveChars',
-        function: require('../index').getPercentageOfRepetitiveChars,
+        func: require('../index').getPercentageOfRepetitiveChars,
         preferredStringFormat: 'string',
         parameters: ['string', 'number'],
       }

@@ -1,5 +1,5 @@
 // nodeunit tests/test.getAll.js
-const params = ['key', 'function', 'preferredStringFormat', 'parameters'];
+const params = ['key', 'func', 'preferredStringFormat', 'parameters'];
 const totalFunctions = Object.keys(require('../index')).length - 1;
 
 // Tests --------------------------------------
@@ -32,7 +32,7 @@ exports.all_object_keys_available = function (test) {
         explanation.push(`${item.key}: missing param (${param}).`);
       }
     });
-    if (!isFunction(item.function)) {
+    if (!isFunction(item.func)) {
       result = false;
       explanation.push(`${item.key}: has no valid functions attached.`)
     }

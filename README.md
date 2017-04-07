@@ -63,7 +63,7 @@ Below is the provided data about the tools:
 | Key | Description |
 | --- | --- |
 | key | A key corresponding the direct function call. |
-| function | The actual function (string tool). |
+| func | The actual function. |
 | preferredStringFormat | A preferred format for the string (eg. fastest). |
 | parameters | All the possible parameters. If multiple types are allowed, all are listed. |
 
@@ -72,13 +72,13 @@ Example result:
 [
  {
   key: 'getPercentageOfRepetitiveStructure',
-  function: getPercentageOfRepetitiveStructure,
+  func: getPercentageOfRepetitiveStructure,
   preferredStringFormat: 'Array',
   parameters: [['Array', 'string'], 'string'],
  },
  {
   key: 'getPercentageOfRepetitiveChars',
-  function: getPercentageOfRepetitiveChars,
+  func: getPercentageOfRepetitiveChars,
   preferredStringFormat: 'string',
   parameters: ['string', 'number'],
  }
