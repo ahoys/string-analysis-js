@@ -5,7 +5,7 @@ const Index = require('../index');
  * Also additional infomation about the functions is provided.
  * @returns {object}
  */
-const getAll = () => {
+module.exports = () => {
   try {
     return {
       getPercentageOfRepetitiveStructure: {
@@ -38,5 +38,3 @@ const getAll = () => {
     return {};
   }
 };
-
-module.exports = getAll;

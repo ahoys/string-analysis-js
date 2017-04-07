@@ -4,7 +4,7 @@
  * @param minChars
  * @returns {number}
  */
-const getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
+module.exports = getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
   try {
     let sum = 0;
     let multiplier = 0;
@@ -27,5 +27,3 @@ const getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
     return 0;
   }
 };
-
-module.exports = getPercentageOfRepetitiveChars;

@@ -5,7 +5,7 @@
  * @param minLength
  * @returns {number}
  */
-const getPercentageOfLongStrings = (payload = [], splitter = ' ', minLength = 16) => {
+module.exports = (payload = [], splitter = ' ', minLength = 16) => {
   try {
     const parts = typeof payload === 'string'
       ? payload.split(splitter)
@@ -16,5 +16,3 @@ const getPercentageOfLongStrings = (payload = [], splitter = ' ', minLength = 16
     return 0;
   }
 };
-
-module.exports = getPercentageOfLongStrings;

@@ -4,7 +4,7 @@
  * @param splitter
  * @returns {number}
  */
-const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
+module.exports = (payload = [], splitter = ' ') => {
   try {
     const parts = typeof payload === 'string'
       ? payload.split(splitter)
@@ -58,5 +58,3 @@ const getPercentageOfRepetitiveStructure = (payload = [], splitter = ' ') => {
     return 0;
   }
 };
-
-module.exports = getPercentageOfRepetitiveStructure;
