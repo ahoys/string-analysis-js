@@ -77,11 +77,11 @@ Example result:
   parameters: [['Array', 'string'], 'string'],
  },
  {
-   key: 'getPercentageOfRepetitiveChars',
-   function: getPercentageOfRepetitiveChars,
-   preferredStringFormat: 'string',
-   parameters: ['string', 'number'],
-  }
+  key: 'getPercentageOfRepetitiveChars',
+  function: getPercentageOfRepetitiveChars,
+  preferredStringFormat: 'string',
+  parameters: ['string', 'number'],
+ }
 ]
 ```
 
