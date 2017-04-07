@@ -16,7 +16,7 @@ exports.all_functions_available = function (test) {
 };
 
 exports.all_keys_have_functions = function (test) {
-  let result = true;
+  let result;
   let explanation;
   Object.keys(Index).forEach((key) => {
     result = true;

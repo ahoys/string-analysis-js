@@ -13,23 +13,24 @@ exports.all_functions_available = function (test) {
 
 exports.all_object_keys_available = function (test) {
   const obj = getAll();
-  allFound = true;
+  let result;
   let explanation;
   Object.keys(obj).forEach((key) => {
+      result = true;
       explanation = [];
       const thisItem = obj[key];
       if (Object.keys(thisItem).length !== params.length) {
-          allFound = false;
+          result = false;
           explanation.push(`${key}: invalid count of parameters.`);
       } else {
           params.forEach((param) => {
               if (!(param in thisItem)) {
-                  allFound = false;
+                  result = false;
                   explanation.push(`${key}: missing param (${param}).`);
               }
           });
       }
-      test.ok(allFound, explanation);
+      test.ok(result, explanation);
   });
   test.expect(Object.keys(obj).length);
   test.done();
