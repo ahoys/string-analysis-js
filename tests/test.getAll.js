@@ -14,7 +14,7 @@ exports.all_functions_available = function (test) {
 exports.all_object_keys_available = function (test) {
   const obj = getAll();
   allFound = true;
-  let explanation = [];
+  let explanation;
   Object.keys(obj).forEach((key) => {
       explanation = [];
       const thisItem = obj[key];

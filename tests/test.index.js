@@ -17,7 +17,7 @@ exports.all_functions_available = function (test) {
 
 exports.all_keys_have_functions = function (test) {
   let result = true;
-  let explanation = '';
+  let explanation;
   Object.keys(Index).forEach((key) => {
     explanation = '';
     if (!isFunction(Index[key])) {
