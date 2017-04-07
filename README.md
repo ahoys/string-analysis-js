@@ -65,7 +65,8 @@ Below is the provided data about the tools:
 | key | A key corresponding the direct function call. |
 | func | The actual function. |
 | preferredStringFormat | A preferred format for the string (eg. fastest). |
-| parameters | All the possible parameters. If multiple types are allowed, all are listed. |
+| parameters | All possible parameters. If multiple types are allowed, all are listed. |
+| requiredParameters | Whether the parameter is required (same indexes as in parameters). |
 
 Example result:
 ```
@@ -74,13 +75,21 @@ Example result:
   key: 'getPercentageOfRepetitiveStructure',
   func: getPercentageOfRepetitiveStructure,
   preferredStringFormat: 'Array',
-  parameters: [['Array', 'string'], 'string'],
+  parameters: {
+   content: ['Array', 'string'],
+   splitter: ['string']
+  },
+  requiredParameters: [true, false],
  },
  {
   key: 'getPercentageOfRepetitiveChars',
   func: getPercentageOfRepetitiveChars,
   preferredStringFormat: 'string',
-  parameters: ['string', 'number'],
+  parameters: {
+   content: ['string'],
+   minChars: ['number']
+  },
+  requiredParameters: [true, false],
  }
 ]
 ```

@@ -10,25 +10,43 @@ module.exports = () => {
         key: 'getPercentageOfRepetitiveStructure',
         func: require('../index').getPercentageOfRepetitiveStructure,
         preferredStringFormat: 'Array',
-        parameters: [['Array', 'string'], 'string'],
+        parameters: {
+          content: ['Array', 'string'],
+          splitter: ['string']
+        },
+        requiredParameters: [true, false],
       },
       {
         key: 'getPercentageOfShortStrings',
         func: require('../index').getPercentageOfShortStrings,
         preferredStringFormat: 'Array',
-        parameters: [['Array', 'string'], 'string', 'number'],
+        parameters: {
+          content: ['Array', 'string'],
+          splitter: ['string'],
+          maxLength: ['number'],
+        },
+        requiredParameters: [true, false, false],
       },
       {
         key: 'getPercentageOfLongStrings',
         func: require('../index').getPercentageOfLongStrings,
         preferredStringFormat: 'Array',
-        parameters: [['Array', 'string'], 'string', 'number'],
+        parameters: {
+          content: ['Array', 'string'],
+          splitter: ['string'],
+          minLength: ['number'],
+        },
+        requiredParameters: [true, false, false],
       },
       {
         key: 'getPercentageOfRepetitiveChars',
         func: require('../index').getPercentageOfRepetitiveChars,
         preferredStringFormat: 'string',
-        parameters: ['string', 'number'],
+        parameters: {
+          content: ['string'],
+          minChars: ['number'],
+        },
+        requiredParameters: [true, false],
       }
     ];
   } catch (e) {

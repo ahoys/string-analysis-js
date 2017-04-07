@@ -1,5 +1,5 @@
 // nodeunit tests/test.getAll.js
-const params = ['key', 'func', 'preferredStringFormat', 'parameters'];
+const params = ['key', 'func', 'preferredStringFormat', 'parameters', 'requiredParameters'];
 const totalFunctions = Object.keys(require('../index')).length - 1;
 
 // Tests --------------------------------------
