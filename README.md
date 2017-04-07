@@ -4,12 +4,17 @@ Useful for purposes like detecting spam from messages.
 
 ## About results
 
-All percentages are returned in a range of 0 to 1, where 1 translates to 100%.
+All percentages are returned as numbers, ranging from 0 (0%) to 1 (100%).
+
 The results are not rounded.
 
 ## Functions
 
-These are the functions you can use to analyse your string.
+These are the functions you can use to analyse your string(s). Payload can often be
+inputted as a string or an array of strings. The former requires a valid splitter that is
+used to split the string into words, for more: 
+[MDN String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split).
+
 Note that you do not need to input values to @params that have a default value.
 
 **getPercentageOfRepetitiveStructure(payload, splitter)**
@@ -41,6 +46,44 @@ Note that you do not need to input values to @params that have a default value.
 1. @param payload {string, array of strings}: the string to be investigated.
 2. @param minChars {number} a minimum length for the repetition before being accounted. (default 3)
 - @returns {number}: a percentage of the repetitive chars.
+
+
+**getAll()**
+
+- @returns {Array}: an array of objects, containing all the string tools available.
+
+## More about getAll()
+
+You can use `getAll()` to receive all the available string tools in this module. In this way your 
+application can always use the full range of tools available, before processing the results further. 
+As this module obtains new tools, your application will always stay up-to-date with a mere `npm update`.
+
+Below is the provided data about the tools:
+
+| Key | Description |
+| --- | --- |
+| key | A key corresponding the direct function call. |
+| function | The actual function (string tool). |
+| preferredStringFormat | A preferred format for the string (eg. fastest). |
+| parameters | All the possible parameters. If multiple types are allowed, all are listed. |
+
+Example result:
+```
+[
+ {
+  key: 'getPercentageOfRepetitiveStructure',
+  function: getPercentageOfRepetitiveStructure,
+  preferredStringFormat: 'Array',
+  parameters: [['Array', 'string'], 'string'],
+ },
+ {
+   key: 'getPercentageOfRepetitiveChars',
+   function: getPercentageOfRepetitiveChars,
+   preferredStringFormat: 'string',
+   parameters: ['string', 'number'],
+  }
+]
+```
 
 ## License
 MIT
