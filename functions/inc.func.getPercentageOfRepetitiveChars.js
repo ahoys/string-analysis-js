@@ -4,7 +4,7 @@
  * @param minChars
  * @returns {number}
  */
-module.exports = getPercentageOfRepetitiveChars = (payload = '', minChars = 3) => {
+module.exports = (payload = '', minChars = 3) => {
   try {
     let sum = 0;
     let multiplier = 0;
