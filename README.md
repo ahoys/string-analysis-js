@@ -10,40 +10,40 @@ The results are not rounded.
 
 ## Functions
 
-These are the functions you can use to analyse your string(s). Payload can often be
+These are the functions you can use to analyse your string(s). Content can often be
 inputted as a string or an array of strings. The former requires a valid splitter that is
 used to split the string into words, for more: 
 [MDN String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split).
 
 Note that you do not need to input values to @params that have a default value.
 
-**getPercentageOfRepetitiveStructure(payload, splitter)**
+**getPercentageOfRepetitiveStructure(content, splitter)**
 
-1. @param payload {string, array of strings}: the string to be investigated.
+1. @param content {string, array of strings}: the string to be investigated.
 2. @param splitter {string}: a character used to split the words. (default: " ")
 - @returns {number}: a percentage of the repetitive structure.
 
 
-**getPercentageOfShortStrings(payload, splitter, maxLength)**
+**getPercentageOfShortStrings(content, splitter, maxLength)**
 
-1. @param payload {string, array of strings}: the string to be investigated.
+1. @param content {string, array of strings}: the string to be investigated.
 2. @param splitter {string}: a character used to split the words. (default: " ")
 3. @param maxLength {number}: a maximum length for a word to be considered small. (default 3)
 - @returns {number}: a percentage of the short words.
 
 
-**getPercentageOfLongStrings(payload, splitter, minLength)**
+**getPercentageOfLongStrings(content, splitter, minLength)**
 
 
-1. @param payload {string, array of strings}: the string to be investigated.
+1. @param content {string, array of strings}: the string to be investigated.
 2. @param splitter {string}: a character used to split the words. (default: " ")
 3. @param minLength {number}: a minimum length for a word to be considered long. (default 16)
 - @returns {number}: a percentage of the long words.
 
 
-**getPercentageOfRepetitiveChars(payload, minChars)**
+**getPercentageOfRepetitiveChars(content, minChars)**
 
-1. @param payload {string, array of strings}: the string to be investigated.
+1. @param content {string, array of strings}: the string to be investigated.
 2. @param minChars {number} a minimum length for the repetition before being accounted. (default 3)
 - @returns {number}: a percentage of the repetitive chars.
 

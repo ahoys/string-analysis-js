@@ -1,14 +1,14 @@
 /**
  * Returns the percentage of repetitive structure in a string or an array of strings.
- * @param payload
+ * @param content
  * @param splitter
  * @returns {number}
  */
-module.exports = (payload = [], splitter = ' ') => {
+module.exports = (content = [], splitter = ' ') => {
   try {
-    const parts = typeof payload === 'string'
-      ? payload.split(splitter)
-      : payload;
+    const parts = typeof content === 'string'
+      ? content.split(splitter)
+      : content;
     const totalCount = parts.length;
     if (totalCount < 1) return 0;
     const strTable = {};
