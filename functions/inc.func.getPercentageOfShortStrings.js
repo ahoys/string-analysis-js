@@ -5,7 +5,7 @@
  * @param maxLength
  * @returns {number}
  */
-module.exports = (content = [], splitter = ' ', maxLength = 3) => {
+module.exports = (content = [], splitter = ' ', maxLength = 2) => {
   try {
     const parts = typeof content === 'string'
       ? content.split(splitter)

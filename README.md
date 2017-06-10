@@ -28,7 +28,7 @@ Note that you do not need to input values to @params that have a default value.
 
 1. @param content {string, array of strings}: the string to be investigated.
 2. @param splitter {string}: a character used to split the words. (default: " ")
-3. @param maxLength {number}: a maximum length for a word to be considered small. (default 3)
+3. @param maxLength {number}: a maximum length for a word to be considered small. (default 2)
 - @returns {number}: a percentage of the short words.
 
 
