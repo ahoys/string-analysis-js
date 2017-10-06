@@ -37,5 +37,16 @@
     ["aa", 0],
     ["a", 0],
     ["", 0]
+  ],
+  "getPercentageOfUpperCaseChars": [
+    ["a", 0],
+    ["A", 1],
+    ["Lorem ipsum dolor sit amet, consectetur.", 0.025],
+    ["AAAAAAAAAAAAAAAAAAAA", 1],
+    ["ÄÄÖÖÆ", 1],
+    ["", 0],
+    [" ", 0],
+    ["12 34", 0],
+    ["ABCabc", 0.5]
   ]
 }

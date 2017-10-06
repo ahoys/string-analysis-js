@@ -47,6 +47,16 @@ module.exports = () => {
           minChars: ['number'],
         },
         requiredParameters: [true, false],
+      },
+      {
+        key: 'getPercentageOfUpperCaseChars',
+        func: require('../index').getPercentageOfUpperCaseChars,
+        preferredStringFormat: 'string',
+        parameters: {
+          content: ['string'],
+          re: ['string'],
+        },
+        requiredParameters: [true, false],
       }
     ];
   } catch (e) {
