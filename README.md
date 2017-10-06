@@ -47,6 +47,12 @@ Note that you do not need to input values to @params that have a default value.
 2. @param minChars {number} a minimum length for the repetition before being accounted. (default 3)
 - @returns {number}: a percentage of the repetitive chars.
 
+**getPercentageOfUpperCaseChars(content, re)**
+
+1. @param content {string}: the string to be investigated.
+2. @param re {string} a custom regex for detecting the uppercase letters. (default /^[A-ZÄÖÅÆØ]+$/)
+- @returns {number}: a percentage of the uppercase chars.
+
 
 **getAll()**
 
